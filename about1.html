@@ -1,66 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #007BFF;
-        }
-        h2 {
-            color: #333;
-            margin-top: 20px;
-        }
-        p {
-            line-height: 1.6;
-        }
-        .mission, .team {
-            margin-top: 30px;
-        }
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #777;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Trinity Patent Solutions</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #e0f7fa, #ffffff);
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #1a237e, #3949ab);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+/* NAV */
+nav {
+    background: #283593;
+    padding: 12px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* SECTION */
+.container {
+    padding: 40px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideUp 1s forwards;
+}
+
+/* DIFFERENT COLORS */
+.card:nth-child(1) { border-left: 6px solid #1e88e5; }
+.card:nth-child(2) { border-left: 6px solid #43a047; }
+.card:nth-child(3) { border-left: 6px solid #fb8c00; }
+.card:nth-child(4) { border-left: 6px solid #8e24aa; }
+
+/* HEADINGS */
+h2 {
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(135deg, #42a5f5, #7e57c2);
+    color: white;
+    padding: 50px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #ff6f00;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e65100;
+    transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+    background: #1a237e;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+</style>
 </head>
+
 <body>
 
+<header>
+    <h1>Trinity Patent Solutions</h1>
+    <p>Innovating Ideas. Protecting Creations.</p>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
 <div class="container">
-    <h1>About Us</h1>
-    <p>Welcome to Trinity Patent solutions, where we believe in delivering the best services to our customers. Our mission is to Nurture Trichy Ecosystem with appropriate IP protection .</p>
 
-    <div class="mission">
+    <!-- HERO -->
+    <div class="hero">
+        <h2>About Our Company</h2>
+        <p>We provide expert intellectual property services to protect your innovations and brand identity.</p>
+        <a href="#" class="btn">Get Consultation</a>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="card">
+        <h2>Who We Are</h2>
+        <p>
+            Trinity Patent Solutions is a professional service provider specializing in intellectual property rights 
+            including patents, trademarks, and copyrights. We help innovators and businesses secure their ideas.
+        </p>
+    </div>
+
+    <!-- MISSION -->
+    <div class="card">
         <h2>Our Mission</h2>
-        <p>At Trinity Patent Solutions, our mission is to empower innovation by providing comprehensive patent services that safeguard intellectual property and inspire creativity. We are dedicated to guiding our clients through the complexities of the patent process with integrity, expertise, and personalized support, ensuring that every invention is protected and every visionary is equipped to turn their ideas into reality. Together, we strive to foster a culture of innovation that drives progress and shapes the future.</p>
+        <p>
+            Our mission is to empower individuals and organizations by safeguarding their intellectual assets 
+            through reliable, affordable, and efficient legal support.
+        </p>
     </div>
 
-    <div class="team">
-        <h2>Our Team</h2>
-        <p>We have a dedicated team of professionals who are passionate about what they do. Our team members come from diverse backgrounds and bring a wealth of experience to the table.</p>
+    <!-- SERVICES -->
+    <div class="card">
+        <h2>What We Do</h2>
+        <ul>
+            <li>Patent Filing & Drafting</li>
+            <li>Trademark Registration</li>
+            <li>Copyright Protection</li>
+            <li>IP Consultancy Services</li>
+        </ul>
     </div>
+
+    <!-- WHY US -->
+    <div class="card">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li>Experienced professionals</li>
+            <li>Affordable services</li>
+            <li>End-to-end support</li>
+            <li>Client-focused approach</li>
+        </ul>
+    </div>
+
 </div>
 
-<div class="footer">
-    <p>&copy; 2024 Trinity Patent Solutions. All rights reserved.</p>
-</div>
+<footer>
+    <p>© 2026 Trinity Patent Solutions</p>
+</footer>
 
 </body>
 </html>
