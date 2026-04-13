@@ -8,7 +8,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
+    color: white;
+}
 
+.logo-container img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.title-container h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.title-container p {
+    margin: 5px 0 0;
+    font-size: 14px;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
 /* RESET */
 * {
     margin: 0;
@@ -132,13 +161,16 @@ footer {
 
 <body>
 
-<header style="display:flex; align-items:center; justify-content:center; flex-direction:column;">
+<header class="header">
 
-    <img src="image/logo.png" alt="Trinity Patent Solutions Logo" 
-         style="width:100px; margin-bottom:10px; animation: fadeIn 2s;">
+    <div class="logo-container">
+        <img src="image/logo.png" alt="Logo">
+    </div>
 
-    <h1>Trinity Patent Solutions</h1>
-    <p>Protecting Innovation • Securing Creativity • Empowering Ideas</p>
+    <div class="title-container">
+        <h1>Trinity Patent Solutions</h1>
+        <p>Protecting Innovation • Securing Creativity • Empowering Ideas</p>
+    </div>
 
 </header>
 
