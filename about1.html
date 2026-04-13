@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - Trinity Patent Solutions</title>
+<title>Trinity Patent Solutions</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -17,29 +18,30 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #e0f7fa, #ffffff);
+    background: linear-gradient(120deg, #eef2f3, #ffffff);
 }
 
 /* HEADER */
 header {
-    background: linear-gradient(135deg, #1a237e, #3949ab);
+    background: linear-gradient(135deg, #0d47a1, #1976d2);
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px;
     animation: fadeIn 1.5s ease;
 }
 
 header h1 {
-    font-size: 32px;
+    font-size: 36px;
 }
 
 header p {
-    opacity: 0.9;
+    margin-top: 10px;
+    font-size: 18px;
 }
 
 /* NAV */
 nav {
-    background: #283593;
+    background: #1565c0;
     padding: 12px;
     text-align: center;
 }
@@ -51,50 +53,20 @@ nav a {
     font-weight: 500;
 }
 
-/* SECTION */
-.container {
-    padding: 40px;
-}
-
-/* CARD */
-.card {
-    background: white;
-    padding: 25px;
-    margin-bottom: 25px;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transform: translateY(30px);
-    opacity: 0;
-    animation: slideUp 1s forwards;
-}
-
-/* DIFFERENT COLORS */
-.card:nth-child(1) { border-left: 6px solid #1e88e5; }
-.card:nth-child(2) { border-left: 6px solid #43a047; }
-.card:nth-child(3) { border-left: 6px solid #fb8c00; }
-.card:nth-child(4) { border-left: 6px solid #8e24aa; }
-
-/* HEADINGS */
-h2 {
-    color: #1a237e;
-    margin-bottom: 10px;
-}
-
-/* HERO SECTION */
+/* HERO */
 .hero {
+    padding: 60px;
+    text-align: center;
     background: linear-gradient(135deg, #42a5f5, #7e57c2);
     color: white;
-    padding: 50px;
-    text-align: center;
     border-radius: 10px;
-    margin-bottom: 30px;
+    margin: 20px;
     animation: fadeIn 2s ease;
 }
 
-/* BUTTON */
 .btn {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 20px;
     padding: 12px 25px;
     background: #ff6f00;
     color: white;
@@ -104,13 +76,39 @@ h2 {
 }
 
 .btn:hover {
-    background: #e65100;
-    transform: scale(1.05);
+    transform: scale(1.1);
+}
+
+/* SECTION */
+.container {
+    padding: 30px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: slideUp 1s forwards;
+}
+
+.card:nth-child(1){ border-left: 6px solid #1e88e5; }
+.card:nth-child(2){ border-left: 6px solid #43a047; }
+.card:nth-child(3){ border-left: 6px solid #fb8c00; }
+.card:nth-child(4){ border-left: 6px solid #8e24aa; }
+
+h2 {
+    color: #0d47a1;
+    margin-bottom: 10px;
 }
 
 /* FOOTER */
 footer {
-    background: #1a237e;
+    background: #0d47a1;
     color: white;
     text-align: center;
     padding: 15px;
@@ -118,14 +116,14 @@ footer {
 
 /* ANIMATIONS */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
 @keyframes slideUp {
     to {
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -136,62 +134,78 @@ footer {
 
 <header>
     <h1>Trinity Patent Solutions</h1>
-    <p>Innovating Ideas. Protecting Creations.</p>
+    <p>Protecting Innovation • Securing Creativity • Empowering Ideas</p>
 </header>
 
 <nav>
     <a href="/">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+    <a href="/about1.html">About</a>
+    <a href="/trademark1.html">Trademark</a>
+    <a href="/copyright1.html">Copyright</a>
 </nav>
+
+<div class="hero">
+    <h2>Your Trusted Intellectual Property Partner</h2>
+    <p>
+        We help innovators, startups, and businesses protect their ideas through professional
+        patent, trademark, and copyright services.
+    </p>
+    <a href="#" class="btn">Get Started</a>
+</div>
 
 <div class="container">
 
-    <!-- HERO -->
-    <div class="hero">
-        <h2>About Our Company</h2>
-        <p>We provide expert intellectual property services to protect your innovations and brand identity.</p>
-        <a href="#" class="btn">Get Consultation</a>
-    </div>
-
-    <!-- ABOUT -->
     <div class="card">
-        <h2>Who We Are</h2>
+        <h2>About Trinity Patent Solutions</h2>
         <p>
-            Trinity Patent Solutions is a professional service provider specializing in intellectual property rights 
-            including patents, trademarks, and copyrights. We help innovators and businesses secure their ideas.
+            Trinity Patent Solutions is a dedicated intellectual property service provider offering
+            expert assistance in patents, trademarks, copyrights, and related legal documentation.
+            We support individuals, researchers, startups, and organizations in securing their
+            intellectual assets and transforming ideas into protected innovations.
         </p>
     </div>
 
-    <!-- MISSION -->
     <div class="card">
-        <h2>Our Mission</h2>
-        <p>
-            Our mission is to empower individuals and organizations by safeguarding their intellectual assets 
-            through reliable, affordable, and efficient legal support.
-        </p>
-    </div>
-
-    <!-- SERVICES -->
-    <div class="card">
-        <h2>What We Do</h2>
+        <h2>Our Services</h2>
         <ul>
-            <li>Patent Filing & Drafting</li>
-            <li>Trademark Registration</li>
-            <li>Copyright Protection</li>
-            <li>IP Consultancy Services</li>
+            <li>Patent Filing, Drafting & Documentation</li>
+            <li>Trademark Registration & Objection Handling</li>
+            <li>Copyright Registration</li>
+            <li>IP Consultancy & Legal Support</li>
         </ul>
     </div>
 
-    <!-- WHY US -->
+    <div class="card">
+        <h2>Our Expertise</h2>
+        <p>
+            We have experience supporting academic institutions, researchers, and innovators in
+            filing intellectual property. For example, patent-related work involves technical
+            documentation, claims drafting, and regulatory processes that require deep expertise. :contentReference[oaicite:1]{index=1}
+        </p>
+    </div>
+
     <div class="card">
         <h2>Why Choose Us?</h2>
         <ul>
-            <li>Experienced professionals</li>
-            <li>Affordable services</li>
-            <li>End-to-end support</li>
-            <li>Client-focused approach</li>
+            <li>Experienced in IP documentation and filing</li>
+            <li>Affordable and reliable services</li>
+            <li>End-to-end guidance</li>
+            <li>Focused on innovation and research support</li>
         </ul>
+    </div>
+
+    <div class="card">
+        <h2>Our Vision</h2>
+        <p>
+            To become a trusted partner in intellectual property services by enabling innovators
+            to protect and commercialize their ideas effectively.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Contact Us</h2>
+        <p>Email: trinitypatsol@gmail.com</p>
+        <p>We are here to help you protect your ideas.</p>
     </div>
 
 </div>
