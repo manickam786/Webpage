@@ -9,33 +9,37 @@
 
 <style>
 .header {
-    display: flex;
-    align-items: center;
-    padding: 20px 40px;
+    position: relative;
     background: linear-gradient(135deg, #0d47a1, #1976d2);
     color: white;
+    padding: 25px 20px;
+    text-align: center;
 }
 
-.logo-container img {
-    width: 80px;
-    margin-right: 20px;
+/* LOGO LEFT */
+.logo {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 70px;
 }
 
-.title-container h1 {
+/* CENTER TEXT */
+.center-text h1 {
     margin: 0;
-    font-size: 28px;
+    font-size: 30px;
 }
 
-.title-container p {
+.center-text p {
     margin: 5px 0 0;
     font-size: 14px;
 }
-
 /* Mobile view */
 @media (max-width: 600px) {
-    .header {
-        flex-direction: column;
-        text-align: center;
+    .logo {
+        position: static;
+        display: block;
+        margin: 0 auto 10px;
     }
 }
 /* RESET */
@@ -163,11 +167,9 @@ footer {
 
 <header class="header">
 
-    <div class="logo-container">
-        <img src="image/logo.png" alt="Logo">
-    </div>
+    <img src="logo.png" alt="Logo" class="logo">
 
-    <div class="title-container">
+    <div class="center-text">
         <h1>Trinity Patent Solutions</h1>
         <p>Protecting Innovation • Securing Creativity • Empowering Ideas</p>
     </div>
