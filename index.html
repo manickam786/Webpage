@@ -3,160 +3,211 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Trinity Patent Solutions</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<meta name="description" content="Patent Filing, Design Registration, Trademark Registration, Copyright Registration, FER Reply and IP Consultancy Services">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-.header {
-    position: relative;
-    background: linear-gradient(135deg, #0d47a1, #1976d2);
-    color: white;
-    padding: 25px 20px;
-    text-align: center;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* LOGO LEFT */
-.logo {
-    position: absolute;
-    left: 40px;
-    top: 40px;
-    width: 120px;
-}
-
-/* CENTER TEXT */
-.center-text h1 {
-    margin: 0;
-    font-size: 30px;
-}
-
-.center-text p {
-    margin: 5px 0 0;
-    font-size: 14px;
-}
-/* Mobile view */
-@media (max-width: 600px) {
-    .logo {
-        position: static;
-        display: block;
-        margin: 0 auto 10px;
-    }
-}
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(120deg, #eef2f3, #ffffff);
+body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(120deg,#eef2f3,#ffffff);
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
 }
 
 /* HEADER */
-header {
-    background: linear-gradient(135deg, #0d47a1, #1976d2);
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
-    animation: fadeIn 1.5s ease;
+
+.header{
+    background:linear-gradient(135deg,#0d47a1,#1976d2);
+    color:white;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
 }
 
-header h1 {
-    font-size: 36px;
+.logo{
+    position:absolute;
+    left:20px;
+    width:90px;
 }
 
-header p {
-    margin-top: 10px;
-    font-size: 18px;
+.center-text{
+    text-align:center;
 }
 
-/* NAV */
-nav {
-    background: #1565c0;
-    padding: 12px;
-    text-align: center;
+.center-text h1{
+    font-size:30px;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: 500;
+.center-text p{
+    font-size:14px;
+}
+
+/* NAVIGATION */
+
+nav{
+    background:#1565c0;
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#ffcc80;
 }
 
 /* HERO */
-.hero {
-    padding: 60px;
-    text-align: center;
-    background: linear-gradient(135deg, #42a5f5, #7e57c2);
-    color: white;
-    border-radius: 10px;
-    margin: 20px;
-    animation: fadeIn 2s ease;
+
+.hero{
+    margin:15px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#42a5f5,#7e57c2);
+    color:white;
+    text-align:center;
+    padding:25px;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: #ff6f00;
-    color: white;
-    text-decoration: none;
-    border-radius: 25px;
-    transition: 0.3s;
+.hero h2{
+    font-size:34px;
+    margin-bottom:10px;
 }
 
-.btn:hover {
-    transform: scale(1.1);
+.hero p{
+    font-size:16px;
 }
 
-/* SECTION */
-.container {
-    padding: 30px;
+.button-row{
+    margin-top:20px;
 }
 
-/* CARD */
-.card {
-    background: white;
-    padding: 25px;
-    margin: 20px 0;
-    border-radius: 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    opacity: 0;
-    transform: translateY(40px);
-    animation: slideUp 1s forwards;
+.btn{
+    display:inline-block;
+    padding:12px 24px;
+    margin:5px;
+    border-radius:25px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    background:#ff6f00;
+    transition:.3s;
 }
 
-.card:nth-child(1){ border-left: 6px solid #1e88e5; }
-.card:nth-child(2){ border-left: 6px solid #43a047; }
-.card:nth-child(3){ border-left: 6px solid #fb8c00; }
-.card:nth-child(4){ border-left: 6px solid #8e24aa; }
+.btn:hover{
+    transform:scale(1.05);
+}
 
-h2 {
-    color: #0d47a1;
-    margin-bottom: 10px;
+/* SERVICES */
+
+.service-row{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+    padding:10px 15px;
+}
+
+.service-box{
+    width:240px;
+    background:white;
+    border-radius:12px;
+    padding:18px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-box h3{
+    color:#0d47a1;
+    margin-bottom:8px;
+}
+
+/* TRUST */
+
+.trust-row{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    padding:15px;
+    font-weight:600;
+    color:#0d47a1;
+}
+
+/* CONTACT BAR */
+
+.contact-bar{
+    margin:10px 20px;
+    background:white;
+    border-radius:12px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-bar h3{
+    color:#0d47a1;
+    margin-bottom:10px;
 }
 
 /* FOOTER */
-footer {
-    background: #0d47a1;
-    color: white;
-    text-align: center;
-    padding: 15px;
+
+footer{
+    margin-top:auto;
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:12px;
 }
 
-/* ANIMATIONS */
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
+/* MOBILE */
 
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+@media(max-width:768px){
+
+    .header{
+        flex-direction:column;
+        padding-top:20px;
+    }
+
+    .logo{
+        position:static;
+        margin-bottom:10px;
+    }
+
+    .hero h2{
+        font-size:24px;
+    }
+
+    nav a{
+        display:block;
+        margin:8px 0;
+    }
+
+    .service-box{
+        width:90%;
+    }
+
+    .trust-row{
+        flex-direction:column;
+        text-align:center;
+        gap:10px;
     }
 }
 
@@ -167,7 +218,7 @@ footer {
 
 <header class="header">
 
-    <img src="image/logo.png" alt="Logo" class="logo">
+    <img src="image/logo.png" alt="Trinity Patent Solutions" class="logo">
 
     <div class="center-text">
         <h1>Trinity Patent Solutions</h1>
@@ -184,73 +235,76 @@ footer {
 </nav>
 
 <div class="hero">
-    <h2>Your Trusted Intellectual Property Partner</h2>
+
+    <h2>Protect Your Innovation</h2>
+
     <p>
-        We help innovators, startups, and businesses protect their ideas through professional
-        patent, trademark, and copyright services.
+        Patent Filing • Design Registration • FER Reply •
+        Trademark Registration • Copyright Registration
     </p>
-    <a href="#" class="btn">Get Started</a>
+
+    <div class="button-row">
+
+        <a href="mailto:trinitypatsol@gmail.com" class="btn">
+            Free Consultation
+        </a>
+
+        <a href="https://wa.me/919999999999" class="btn">
+            WhatsApp Us
+        </a>
+
+    </div>
+
 </div>
 
-<div class="container">
+<div class="service-row">
 
-    <div class="card">
-        <h2>About Trinity Patent Solutions</h2>
-        <p>
-            Trinity Patent Solutions is a dedicated intellectual property service provider offering
-            expert assistance in patents, trademarks, copyrights, and related legal documentation.
-            We support individuals, researchers, startups, and organizations in securing their
-            intellectual assets and transforming ideas into protected innovations.
-        </p>
+    <div class="service-box">
+        <h3>Patent Filing</h3>
+        <p>Drafting, Filing, FER Reply & Prosecution Support</p>
     </div>
 
-    <div class="card">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Patent Filing, Drafting & Documentation</li>
-            <li>Trademark Registration & Objection Handling</li>
-            <li>Copyright Registration</li>
-            <li>IP Consultancy & Legal Support</li>
-        </ul>
+    <div class="service-box">
+        <h3>Design Registration</h3>
+        <p>Industrial Design Protection & Registration</p>
     </div>
 
-    <div class="card">
-        <h2>Our Expertise</h2>
-        <p>
-            We have experience supporting academic institutions, researchers, and innovators in
-            filing intellectual property. For example, patent-related work involves technical
-            documentation, claims drafting, and regulatory processes that require deep expertise. :contentReference[oaicite:1]{index=1}
-        </p>
+    <div class="service-box">
+        <h3>Trademark</h3>
+        <p>Registration, Search & Objection Handling</p>
     </div>
 
-    <div class="card">
-        <h2>Why Choose Us?</h2>
-        <ul>
-            <li>Experienced in IP documentation and filing</li>
-            <li>Affordable and reliable services</li>
-            <li>End-to-end guidance</li>
-            <li>Focused on innovation and research support</li>
-        </ul>
+    <div class="service-box">
+        <h3>Copyright</h3>
+        <p>Protection for Software, Books & Creative Works</p>
     </div>
 
-    <div class="card">
-        <h2>Our Vision</h2>
-        <p>
-            To become a trusted partner in intellectual property services by enabling innovators
-            to protect and commercialize their ideas effectively.
-        </p>
-    </div>
+</div>
 
-    <div class="card">
-        <h2>Contact Us</h2>
-        <p>Email: trinitypatsol@gmail.com</p>
-        <p>We are here to help you protect your ideas.</p>
-    </div>
+<div class="trust-row">
+
+    <div>✓ Patent Drafting</div>
+    <div>✓ FER Reply</div>
+    <div>✓ Prior Art Search</div>
+    <div>✓ Startup Support</div>
+    <div>✓ Design Registration</div>
+
+</div>
+
+<div class="contact-bar">
+
+    <h3>Contact Us</h3>
+
+    <p>Email: trinitypatsol@gmail.com</p>
+
+    <p>
+        Patent • Design • Trademark • Copyright
+    </p>
 
 </div>
 
 <footer>
-    <p>© 2026 Trinity Patent Solutions</p>
+    © 2026 Trinity Patent Solutions
 </footer>
 
 </body>
