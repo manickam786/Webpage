@@ -1,223 +1,139 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Existing Customers | Trinity Patent Solutions</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Patent Tracking Portal</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
 body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(120deg,#eef2f3,#ffffff);
-min-height:100vh;
-display:flex;
-flex-direction:column;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f2f2f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
 }
 
-/* HEADER */
+.container{
 
-.header{
-background:linear-gradient(135deg,#0d47a1,#1976d2);
-color:white;
-padding:15px 20px;
-display:flex;
-align-items:center;
-justify-content:center;
-position:relative;
+    background:white;
+    padding:40px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    width:450px;
+    text-align:center;
+
 }
 
-.logo{
-position:absolute;
-left:20px;
-width:90px;
+h2{
+
+    color:#003366;
+    margin-bottom:30px;
+
 }
 
-.center-text{
-text-align:center;
+input{
+
+    width:80%;
+    padding:12px;
+    font-size:18px;
+    text-transform:uppercase;
+
 }
 
-.center-text h1{
-font-size:30px;
+button{
+
+    margin-top:20px;
+    padding:12px 35px;
+    font-size:18px;
+    background:#003366;
+    color:white;
+    border:none;
+    cursor:pointer;
+    border-radius:5px;
+
 }
 
-.center-text p{
-font-size:14px;
+button:hover{
+
+    background:#0055aa;
+
 }
 
-/* NAV */
+#error{
 
-nav{
-background:#1565c0;
-padding:10px;
-text-align:center;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 15px;
-font-weight:500;
-}
-
-nav a:hover{
-color:#ffcc80;
-}
-
-/* CONTENT */
-
-.content{
-flex:1;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:40px 20px;
-}
-
-.content h2{
-color:#0d47a1;
-font-size:36px;
-margin-bottom:15px;
-}
-
-.content p{
-font-size:18px;
-color:#555;
-margin-bottom:40px;
-}
-
-/* BUTTON GRID */
-
-.customer-grid{
-display:flex;
-gap:30px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.customer-btn{
-width:240px;
-height:120px;
-background:white;
-border-radius:15px;
-text-decoration:none;
-color:#0d47a1;
-font-size:28px;
-font-weight:600;
-display:flex;
-justify-content:center;
-align-items:center;
-box-shadow:0 8px 25px rgba(0,0,0,0.12);
-transition:all .3s ease;
-border:3px solid transparent;
-}
-
-.customer-btn:hover{
-transform:translateY(-8px);
-border-color:#1976d2;
-box-shadow:0 15px 35px rgba(0,0,0,0.18);
-}
-
-/* FOOTER */
-
-footer{
-background:#0d47a1;
-color:white;
-text-align:center;
-padding:12px;
-}
-
-/* MOBILE */
-
-@media(max-width:768px){
-
-.logo{
-position:static;
-margin-bottom:10px;
-}
-
-.header{
-flex-direction:column;
-}
-
-.center-text h1{
-font-size:24px;
-}
-
-.content h2{
-font-size:28px;
-}
-
-.customer-btn{
-width:90%;
-max-width:300px;
-}
+    margin-top:20px;
+    color:red;
+    font-weight:bold;
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<header class="header">
+<div class="container">
 
-<img src="image/logo.png" alt="Logo" class="logo">
+<h2>Patent Tracking Portal</h2>
 
-<div class="center-text">
-<h1>Trinity Patent Solutions</h1>
-<p>Protecting Innovation • Securing Creativity • Empowering Ideas</p>
-</div>
+<p>Please enter your company name</p>
 
-</header>
+<input
+type="text"
+id="company"
+placeholder="Example: HEB">
 
-<nav>
-<a href="/">Home</a>
-<a href="/patent.html">Patent</a>
-<a href="/about1.html">About</a>
-<a href="/trademark1.html">Trademark</a>
-<a href="/copyright1.html">Copyright</a>
-</nav>
+<br>
 
-<div class="content">
+<button onclick="openPortal()">
+Enter
+</button>
 
-<h2>Existing Customers</h2>
-
-<p>Select your organization to continue</p>
-
-<div class="customer-grid">
-
-<a href="hapf.html" class="customer-btn">
-HAPF
-</a>
-
-<a href="heb.html" class="customer-btn">
-HEB
-</a>
-
-<a href="sjc.html" class="customer-btn">
-SJC
-</a>
+<div id="error"></div>
 
 </div>
 
-</div>
+<script>
 
-<footer>
-©  2026 Trinity Patent Solutions
-</footer>
+function openPortal(){
+
+    var company=document.getElementById("company").value.trim().toUpperCase();
+
+    switch(company){
+
+        case "HEB":
+            window.location.href="heb.html";
+            break;
+
+        case "HAPF":
+            window.location.href="hapf.html";
+            break;
+
+        case "SJC":
+            window.location.href="sjc.html";
+            break;
+
+        default:
+            document.getElementById("error").innerHTML="Invalid company name.";
+    }
+
+}
+
+document.getElementById("company").addEventListener("keypress",function(event){
+
+    if(event.key==="Enter"){
+
+        openPortal();
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
-```
