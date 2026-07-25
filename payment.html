@@ -181,46 +181,48 @@
 
 <script>
 
-async function generateQR(){
+async function generateQR() {
 
-    let amount=document.getElementById("amount").value;
+    const amount = document.getElementById("amount").value;
 
-    if(amount=="" || amount<=0){
-
-        alert("Please enter a valid amount.");
-
+    if (!amount || amount <= 0) {
+        alert("Enter a valid amount.");
         return;
-
     }
 
-    document.getElementById("paymentStatus").innerHTML="Generating QR...";
+    document.getElementById("paymentStatus").innerHTML = "Connecting to server...";
 
-    /*
-        This is where we'll call your Railway backend.
+    try {
 
-        Example:
+        const response = await fetch(
+            "https://YOUR-RENDER-URL.onrender.com/create-order",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    amount: Number(amount)
+                })
+            }
+        );
 
-        fetch("https://your-backend.up.railway.app/create-order",{
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json"
-            },
-            body:JSON.stringify({
-                amount:amount
-            })
-        })
+        const data = await response.json();
 
-    */
+        console.log(data);
 
-    // Temporary QR for UI testing
+        document.getElementById("paymentStatus").innerHTML =
+            "Backend connected successfully! Amount: ₹" + data.amount;
 
-    document.getElementById("qrContainer").innerHTML=
-    `<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=Amount:${amount}" alt="QR Code">`;
+    } catch (error) {
 
-    document.getElementById("paymentStatus").innerHTML="Waiting for Payment...";
+        console.error(error);
 
+        document.getElementById("paymentStatus").innerHTML =
+            "Unable to connect to backend.";
+
+    }
 }
-
 </script>
 
 </body>
