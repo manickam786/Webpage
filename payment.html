@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity Patent Solutions | QR Payment</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f7fb;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .container{
+            width:90%;
+            max-width:700px;
+            background:white;
+            border-radius:15px;
+            box-shadow:0 8px 25px rgba(0,0,0,.15);
+            padding:35px;
+            text-align:center;
+        }
+
+        h1{
+            color:#1565C0;
+            margin-bottom:10px;
+        }
+
+        h3{
+            color:#555;
+            margin-bottom:30px;
+            font-weight:normal;
+        }
+
+        .amount-box{
+            margin:20px auto;
+        }
+
+        label{
+            display:block;
+            font-size:20px;
+            margin-bottom:10px;
+            font-weight:bold;
+        }
+
+        input{
+            width:250px;
+            font-size:28px;
+            text-align:center;
+            padding:12px;
+            border-radius:10px;
+            border:2px solid #1565C0;
+        }
+
+        button{
+            margin-top:25px;
+            background:#1565C0;
+            color:white;
+            border:none;
+            padding:15px 35px;
+            font-size:20px;
+            border-radius:10px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        button:hover{
+            background:#0D47A1;
+        }
+
+        #qrContainer{
+            margin-top:35px;
+            min-height:320px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border:2px dashed #bbb;
+            border-radius:12px;
+            background:#fafafa;
+        }
+
+        #qrContainer img{
+            width:280px;
+            height:280px;
+        }
+
+        .status{
+            margin-top:25px;
+            font-size:22px;
+            font-weight:bold;
+            color:#ff9800;
+        }
+
+        .footer{
+            margin-top:30px;
+            color:#666;
+            font-size:14px;
+        }
+
+        @media(max-width:600px){
+
+            .container{
+                padding:20px;
+            }
+
+            input{
+                width:100%;
+                font-size:24px;
+            }
+
+            button{
+                width:100%;
+            }
+
+            #qrContainer img{
+                width:230px;
+                height:230px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Trinity Patent Solutions</h1>
+
+    <h3>Secure UPI QR Payment</h3>
+
+    <div class="amount-box">
+
+        <label>Enter Amount (₹)</label>
+
+        <input
+            type="number"
+            id="amount"
+            min="1"
+            placeholder="Enter Amount">
+
+    </div>
+
+    <button onclick="generateQR()">
+        Generate QR Code
+    </button>
+
+    <div id="qrContainer">
+
+        <p style="color:#999;">
+            QR Code will appear here
+        </p>
+
+    </div>
+
+    <div class="status" id="paymentStatus">
+
+        Waiting for Payment...
+
+    </div>
+
+    <div class="footer">
+
+        Powered by Trinity Patent Solutions
+
+    </div>
+
+</div>
+
+<script>
+
+async function generateQR(){
+
+    let amount=document.getElementById("amount").value;
+
+    if(amount=="" || amount<=0){
+
+        alert("Please enter a valid amount.");
+
+        return;
+
+    }
+
+    document.getElementById("paymentStatus").innerHTML="Generating QR...";
+
+    /*
+        This is where we'll call your Railway backend.
+
+        Example:
+
+        fetch("https://your-backend.up.railway.app/create-order",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                amount:amount
+            })
+        })
+
+    */
+
+    // Temporary QR for UI testing
+
+    document.getElementById("qrContainer").innerHTML=
+    `<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=Amount:${amount}" alt="QR Code">`;
+
+    document.getElementById("paymentStatus").innerHTML="Waiting for Payment...";
+
+}
+
+</script>
+
+</body>
+</html>
