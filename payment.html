@@ -217,9 +217,7 @@ async function generateQR() {
 document.getElementById("paymentStatus").innerHTML =
     "Opening Cashfree Checkout...";
 
-const cashfree = Cashfree({
-    mode: "production"
-});
+const cashfree = Cashfree();
 
 cashfree.checkout({
     paymentSessionId: data.payment_session_id,
