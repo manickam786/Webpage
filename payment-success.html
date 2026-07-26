@@ -165,9 +165,13 @@
 const params = new URLSearchParams(window.location.search);
 
 const orderId = params.get("order_id");
+const cfOrderId = params.get("cf_order_id");
 
 document.getElementById("orderid").innerHTML =
     orderId ? orderId : "Not Available";
+
+document.getElementById("reference").innerHTML =
+    cfOrderId ? cfOrderId : "Not Available";
 
 document.getElementById("datetime").innerHTML =
     new Date().toLocaleString();
