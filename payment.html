@@ -211,8 +211,8 @@ async function generateQR() {
 
         console.log(data);
 
-        document.getElementById("paymentStatus").innerHTML =
-            "Backend connected successfully! Amount: ₹" + data.amount;
+       document.getElementById("paymentStatus").innerHTML =
+    "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
 
     } catch (error) {
 
