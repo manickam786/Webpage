@@ -210,12 +210,21 @@ async function generateQR() {
             }
         );
 
-        const data = await response.json();
+       const data = await response.json();
 
         console.log(data);
 
-       document.getElementById("paymentStatus").innerHTML =
-    "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+document.getElementById("paymentStatus").innerHTML =
+    "Opening Cashfree Checkout...";
+
+const cashfree = Cashfree({
+    mode: "production"
+});
+
+cashfree.checkout({
+    paymentSessionId: data.payment_session_id,
+    redirectTarget: "_self"
+});
 
     } catch (error) {
 
